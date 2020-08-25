@@ -6,9 +6,10 @@ import { getData, RedditPost } from "../lib/Post"
  * @param subreddit The subreddit to fetch a post from
  */
 async function rising(subreddit: string): Promise<RedditPost> {
-    if (subreddit.includes("r/")) subreddit = subreddit.split("r/")[1]
+    if (subreddit.includes("r/")) subreddit = subreddit.split("r/")[1];
+    let data;
     try {
-        var { data } = await axios.get(`https://reddit.com/r/${subreddit}/rising.json`)
+        data = (await axios.get(`https://reddit.com/r/${subreddit}/rising.json`)).data
     } catch {
         throw new Error(`404 - The subreddit ${subreddit} was not found`)
     }

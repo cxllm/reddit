@@ -45,7 +45,8 @@ function RedditData(data) {
         `URL: ${data.url}`,
         `Image: ${data.image}`,
         `Upvotes: ${data.upvotes}`,
-        `Downvotes: ${data.downvotes}`
+        `Downvotes: ${data.downvotes}`,
+        `Video: ${data.video}`
     ].join("\n")
 
 }

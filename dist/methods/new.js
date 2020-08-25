@@ -12,8 +12,9 @@ const Post_1 = require("../lib/Post");
 async function _new(subreddit) {
     if (subreddit.includes("r/"))
         subreddit = subreddit.split("r/")[1];
+    let data;
     try {
-        var { data } = await axios_1.default.get(`https://reddit.com/r/${subreddit}/new.json`);
+        data = (await axios_1.default.get(`https://reddit.com/r/${subreddit}/new.json`)).data;
     }
     catch {
         throw new Error(`404 - The subreddit ${subreddit} was not found`);

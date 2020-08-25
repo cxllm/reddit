@@ -6,8 +6,9 @@ import axios from "axios";
  */
 async function exists(subreddit: string): Promise<boolean> {
     if (subreddit.includes("r/")) subreddit = subreddit.split("r/")[1]
+    let data;
     try {
-        var { data } = await axios.get(`https://www.reddit.com/search.json?q=${subreddit}`)
+        data = (await axios.get(`https://www.reddit.com/search.json?q=${subreddit}`)).data
     } catch {
         return false
     }

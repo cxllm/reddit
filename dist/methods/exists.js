@@ -11,8 +11,9 @@ const axios_1 = __importDefault(require("axios"));
 async function exists(subreddit) {
     if (subreddit.includes("r/"))
         subreddit = subreddit.split("r/")[1];
+    let data;
     try {
-        var { data } = await axios_1.default.get(`https://www.reddit.com/search.json?q=${subreddit}`);
+        data = (await axios_1.default.get(`https://www.reddit.com/search.json?q=${subreddit}`)).data;
     }
     catch {
         return false;
