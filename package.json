@@ -1,12 +1,19 @@
 {
   "name": "@cxllm/reddit",
-  "version": "1.0.0",
+  "version": "1.0.1-8",
   "description": "A simple reddit api wrapper/cli to make fetching reddit posts easier",
   "main": "./dist/index.js",
   "scripts": {
-    "preinstall": "node ./dist/lib/preinstall.js"
+    "prepublish": "tsc",
+    "preinstall": "node ./dist/lib/preinstall"
   },
-  "keywords": [],
+  "keywords": [
+    "reddit",
+    "reddit api",
+    "simple reddit",
+    "api",
+    "memes"
+  ],
   "author": "cxllm",
   "license": "ISC",
   "repository": {

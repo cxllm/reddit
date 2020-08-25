@@ -1,5 +1,4 @@
-import axios from "axios"
-import { getData, RedditPost } from "../lib/Post"
+import axios from "axios";
 
 /**
  * Check if a subreddit exists

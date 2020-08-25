@@ -1,0 +1,1 @@
+console.log("Thank you for installing this package\nFor info on how to use it, see here: https://npmjs.com/@cxllm/reddit\nFor any issues, please join the support server - https://discord.com/invite/XVxhVvG");

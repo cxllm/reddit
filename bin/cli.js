@@ -8,8 +8,9 @@ require("fs").readdirSync(`${__dirname}/cmds`).map(file => {
     cmd.aliases.map(alias => aliases.set(alias, cmd))
 })
 const args = process.argv.slice(2).join(" ").toLowerCase().split(" ");
-const command = args.shift()
+let command = args.shift()
 const reddit = require("../dist/index");
+if (!command) command = "help"
 if (commands.has(command) || aliases.has(command)) {
     const cmd = commands.get(command) || aliases.get(command);
     if (cmd.subreddit) {
