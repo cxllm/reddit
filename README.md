@@ -33,7 +33,7 @@ I am going to group 4 methods into one in this documentation as they all return 
 All the methods **must** be treated as async (await or .then) as they make web requested
 In this example, I will use r/memes as my subreddit:
 ```js
-const sub = "memes" //you can also use r/memes as it slices it in the function
+const sub = "memes"; //you can also use r/memes as it slices it in the function
 (async () => {
     try {
         await Reddit.random(sub) //fetches a random post from r/memes
